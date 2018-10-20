@@ -8,46 +8,52 @@ $(document).on("click", '#stop', function () {
 })
 
 
-//Trivia questions, answers, and correct answers==================================
+//TRIVIA QUESTIONS, ANSWERS, CORRECT ANSWERS=======================================
 var triviaQuestions = [{
-    question: "In what year was the Aztec Empire founded?",
-    answer: [1217, 1825, 1519, 1323],
-    correctAnswer: "1323"
+    question: "Who sang A Change is Gonna Come?",
+    answer: ["Marvin Gaye", "Otis Redding", "Al Green", "Sam Cooke"],
+    correctAnswer: "Sam Cooke",
 }, {
-    question: "What was the land they came from?",
-    answer: ["Mexico", "Atlantis", "Aztlan", "Canada"],
-    correctAnswer: "Aztlan"
+    question: "Whow sang I'd Rather go Blind?",
+    answer: ["Etta James", "Dianna Ross", "Tammi Terrel", "Mary Wells"],
+    correctAnswer: ""
 }, {
-    question: "Who was the person that led them on their migration?",
-    answer: ["Huitzilopochtli", "Quetzalcoatl", "Xipetotec", "Moctezuma"],
-    correctAnswer: "Huitzilopochtli"
+    question: "Who sang Tired of Being Alone?",
+    answer: ["Sam Cooke", "Al Green", "Marvin Gaye", "Smokey Robinson"],
+    correctAnswer: "Al Green"
 }];
 
 
-//For final score===================================================================
+//RUNS GAME=========================================================================
+
+//Score keeper
 var game = {
     correct: 0,
     incorrect: 0,
-    counter: 10,
+    counter: 120,
 
-    //Countdown clock function=======================================================
+    //Countdown clock function
     countdownClock: function () {
         game.counter--;
         $("#counter").html(game.counter);
         if (game.counter <= 0) {
-            console.log("time is up");
             game.over();
         }
     },
 
+    //When start button is clicked this function runs----------------------------------
     start: function () {
-        timer = setInterval(game.countdownClock, 1000);
-        $("#inner-container").html("<h2>Time Remaining: <span id='counter'>120</span> Seconds</h2><br><br>");
 
-        //To remove start button======================================================
+        //Start button is removed
         $("#start").remove();
 
-        //Loop to replace start button with trivia questions==========================
+        //Timer countdown begins
+        timer = setInterval(game.countdownClock, 1000);
+
+        //Countdowns is displayed
+        $("#inner-container").html("<h2>Time Remaining: <span id='counter'>120</span> Seconds</h2><br><br>");
+
+        //Replaces start button with trivia questions, radio buttons, and answers
         for (var i = 0; i < triviaQuestions.length; i++) {
             $("#inner-container").append('<h2>' + triviaQuestions[i].question + '</h2>');
 
@@ -56,11 +62,13 @@ var game = {
             }
         }
 
-        //Adds the done button at bottom of game======================================
+        //Adds the done button at bottom of game
         $("#inner-container").append('<br><br><br><button id="stop">Done</button>');
     },
 
-    //Adds total when game is over and adds to final score=============================
+    //Adds total when game is over and adds to final score----------------------------------------
+
+
     over: function () {
         $.each($("input[name='question-0']:checked"), function () {
             if ($(this).val() === triviaQuestions[0].correctAnswer) {
