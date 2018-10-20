@@ -16,11 +16,11 @@ var triviaQuestions = [{
 }, {
     question: "Whow sang I'd Rather go Blind?",
     answer: ["Etta James", "Dianna Ross", "Tammi Terrel", "Mary Wells"],
-    correctAnswer: ""
+    correctAnswer: "Etta James",
 }, {
     question: "Who sang Tired of Being Alone?",
     answer: ["Sam Cooke", "Al Green", "Marvin Gaye", "Smokey Robinson"],
-    correctAnswer: "Al Green"
+    correctAnswer: "Al Green",
 }];
 
 
@@ -30,7 +30,7 @@ var triviaQuestions = [{
 var game = {
     correct: 0,
     incorrect: 0,
-    counter: 120,
+    counter: 60,
 
     //Countdown clock function
     countdownClock: function () {
@@ -58,7 +58,7 @@ var game = {
             $("#inner-container").append('<h2>' + triviaQuestions[i].question + '</h2>');
 
             for (var j = 0; j < triviaQuestions[i].answer.length; j++) {
-                $("#inner-container").append("<input type='radio' name='question-" + i + "' value =' " + triviaQuestions[i] + "'>" + triviaQuestions[i].answer[j]);
+                $("#inner-container").append("<input type='radio' name='question-" + i + "' value ='" + triviaQuestions[i].answer[j] + "'>" + triviaQuestions[i].answer[j]);
             }
         }
 
