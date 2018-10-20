@@ -1,3 +1,28 @@
 body {
     background-color: lightgray;
 }
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+#counter {
+    font-size: 35px;
+}
+
+#start {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#game-container {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    top: 100px;
+}
