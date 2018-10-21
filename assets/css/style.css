@@ -1,13 +1,21 @@
 body {
     background-color: white;
+    
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 45px;
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
 }
 
 h2 {
     font-size: 25px;
+}
+
+#image {
+    position: relative;
+    width: 100%;
 }
 
 #counter {
@@ -25,14 +33,14 @@ h2 {
     max-width: 960px;
     margin: 0 auto;
     top: 100px;
-    background-color: lightcoral;
-    border: 5px solid gold;
+    background-color: coral;
+    border: 10px solid gold;
     padding: 25px;
-    height: 350px;
+    height: 500px;
 }
 
-#header {
-    font-family: 'Alex Brush', cursive;
+p {
+    font-size: 25px;
     text-align: center;
 }
 
