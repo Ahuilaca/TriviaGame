@@ -1,12 +1,12 @@
 body {
     background-color: white;
-    
+    font-family: 'Berkshire Swash', cursive;
 }
 
 h1 {
-    font-size: 45px;
-    font-family: 'Kaushan Script', cursive;
+    font-size: 125px;
     text-align: center;
+    font-family: 'Qwigley', cursive;
 }
 
 h2 {
@@ -24,19 +24,25 @@ h2 {
 
 #start {
     position: relative;
-    max-width: 960px;
-    margin: 0 auto;
+    height: 50px;
+    width: 100px;
+    border-radius: 8px;
+    left: 45%;
+    background-color: #009999;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 25px;
 }
 
 #game-container {
     position: relative;
-    max-width: 960px;
+    max-width: 760px;
     margin: 0 auto;
     top: 100px;
-    background-color: coral;
-    border: 10px solid gold;
+    background-color: white;
+    border: 5px solid black;
     padding: 25px;
-    height: 500px;
+    opacity: 0.85;
+    filter: alpha(opacity=85); /* For IE8 and earlier */
 }
 
 p {
@@ -44,6 +50,12 @@ p {
     text-align: center;
 }
 
-#start {
-    left: 450px;
+#stop {
+    height: 50px;
+    width: 100px;
+    border-radius: 8px;
+    background-color: #009999;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 25px;
 }
+

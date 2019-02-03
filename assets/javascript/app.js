@@ -14,7 +14,7 @@ var triviaQuestions = [{
     answer: [1962, 1959, 1971, 1968],
     correctAnswer: "1959",
 }, {
-    question: "Who sang I'd Rather go Blind?",
+    question: "Who sang the soulful song I'd Rather go Blind?",
     answer: ["Etta James", "Dianna Ross", "Tammi Terrel", "Mary Wells"],
     correctAnswer: "Etta James",
 }, {
